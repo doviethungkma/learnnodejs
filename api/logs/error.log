@@ -12,3 +12,12 @@
 {"level":"error"}
 {"level":"error"}
 {"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"Hello\"","value":"Hello","valueType":"string"}},"level":"error","message":"Product validation failed: price: Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"Hello\"","value":"Hello","valueType":"string"}},"level":"error","message":"Product validation failed: price: Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"required","message":"Path `price` is required.","name":"ValidatorError","path":"price","properties":{"message":"Path `price` is required.","path":"price","type":"required"}}},"level":"error","message":"Product validation failed: price: Path `price` is required.","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"required","message":"Path `price` is required.","name":"ValidatorError","path":"price","properties":{"message":"Path `price` is required.","path":"price","type":"required"}}},"level":"error","message":"Product validation failed: price: Path `price` is required.","name":"ValidationError"}
+{"level":"error","message":"Cast to ObjectId failed for value \"620da5b60c03066fa2334e311\" (type string) at path \"_id\" for model \"Product\""}
+{"level":"error","message":"Cast to ObjectId failed for value \"620da5b60c03066fa2334e31e\" (type string) at path \"_id\" for model \"Product\""}
