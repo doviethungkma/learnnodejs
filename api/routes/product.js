@@ -8,13 +8,25 @@ const logger = require("../utils/logger");
 //Get all products from DB
 router.get("/", async (req, res, next) => {
   try {
-    const products = await Product.find();
-    console.log(products);
-
-    res.status(200).json(products);
+    const products = await Product.find().select("_id name price");
+    const response = {
+      count: products.length,
+      products: products.map((product) => {
+        return {
+          _id: product._id,
+          name: product.name,
+          price: product.price,
+          request: {
+            type: "GET",
+            url: `http://localhost:3000/products/${product._id}`,
+          },
+        };
+      }),
+    };
+    res.status(200).json(response);
   } catch (err) {
     logger.error(err);
-    res.status(500).json({ error: err });
+    res.status(500).json({ error: err.message });
   }
 });
 
@@ -30,13 +42,21 @@ router.post("/", async (req, res, next) => {
     const newProduct = await product.save();
     logger.info("New product created: " + newProduct);
     res.status(200).json({
-      message: "Added Product to database",
-      product: newProduct,
+      message: "Create New Product Successfully",
+      createdProduct: {
+        _id: newProduct._id,
+        name: newProduct.name,
+        price: newProduct.price,
+        request: {
+          type: "GET",
+          url: `http://localhost:3000/products/${newProduct._id}`,
+        },
+      },
     });
   } catch (err) {
     logger.error(err);
     res.status(500).json({
-      error: err,
+      error: err.message,
     });
   }
 });
@@ -46,9 +66,15 @@ router.get("/:productId", async (req, res, next) => {
   const id = req.params.productId;
 
   try {
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).select("_id name price");
     if (product) {
-      res.status(200).json(product);
+      res.status(200).json({
+        product: product,
+        request: {
+          type: "GET",
+          url: `http://localhost:3000/products`,
+        },
+      });
     } else {
       res.status(404).json({
         message: "Product not found",
@@ -57,7 +83,7 @@ router.get("/:productId", async (req, res, next) => {
   } catch (err) {
     logger.error(err.message);
     res.status(500).json({
-      error: err,
+      error: err.message,
     });
   }
 });
@@ -67,10 +93,13 @@ router.patch("/:productId", async (req, res, next) => {
   const id = req.params.productId;
   try {
     const product = await Product.updateOne({ _id: id }, { $set: req.body });
-    console.log(product);
     if (product.modifiedCount > 0) {
       res.status(200).json({
         message: "Product updated",
+        request: {
+          type: "GET",
+          url: `http://localhost:3000/products/${id}`,
+        },
       });
     }
   } catch (err) {
