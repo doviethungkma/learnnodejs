@@ -12,3 +12,30 @@
 {"level":"error"}
 {"level":"error"}
 {"level":"error"}
+<<<<<<< Updated upstream
+=======
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"New product created: {\n  _id: new ObjectId(\"620da20b9f56fd73321a2e04\"),\n  name: 'test name',\n  price: 100000000,\n  __v: 0\n}"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"Hello\"","value":"Hello","valueType":"string"}},"level":"error","message":"Product validation failed: price: Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"Hello\"","value":"Hello","valueType":"string"}},"level":"error","message":"Product validation failed: price: Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"ValidationError"}
+{"level":"info","message":"New product created: {\n  _id: new ObjectId(\"620da2cf4bf38e656bd60ae7\"),\n  name: 'test name 123',\n  __v: 0\n}"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"required","message":"Path `price` is required.","name":"ValidatorError","path":"price","properties":{"message":"Path `price` is required.","path":"price","type":"required"}}},"level":"error","message":"Product validation failed: price: Path `price` is required.","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"required","message":"Path `price` is required.","name":"ValidatorError","path":"price","properties":{"message":"Path `price` is required.","path":"price","type":"required"}}},"level":"error","message":"Product validation failed: price: Path `price` is required.","name":"ValidationError"}
+{"level":"info","message":"New product created: {\n  _id: new ObjectId(\"620da5b60c03066fa2334e31\"),\n  name: 'test new format of response',\n  price: 7162537815628,\n  __v: 0\n}"}
+{"level":"error","message":"Cast to ObjectId failed for value \"620da5b60c03066fa2334e311\" (type string) at path \"_id\" for model \"Product\""}
+{"level":"error","message":"Cast to ObjectId failed for value \"620da5b60c03066fa2334e31e\" (type string) at path \"_id\" for model \"Product\""}
+{"level":"info","message":"New order created: {\n  _id: new ObjectId(\"620dabda25983d8d9c280795\"),\n  product: new ObjectId(\"620cac74188a0655e72e97c4\"),\n  quantity: 2,\n  __v: 0\n}"}
+{"level":"error"}
+{"_message":"Order validation failed","errors":{"product":{"kind":"required","message":"Path `product` is required.","name":"ValidatorError","path":"product","properties":{"message":"Path `product` is required.","path":"product","type":"required"}}},"level":"error","message":"Order validation failed: product: Path `product` is required.","name":"ValidationError"}
+{"_message":"Order validation failed","errors":{"product":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"jagsdhjg\" (type string) at path \"product\"","name":"CastError","path":"product","reason":{},"stringValue":"\"jagsdhjg\"","value":"jagsdhjg","valueType":"string"}},"level":"error","message":"Order validation failed: product: Cast to ObjectId failed for value \"jagsdhjg\" (type string) at path \"product\"","name":"ValidationError"}
+{"level":"info","message":"New order stored: {\n  _id: new ObjectId(\"620db1da6b6788bde56ca9a9\"),\n  product: new ObjectId(\"620cac74188a0655e72e97c4\"),\n  quantity: 22,\n  __v: 0\n}"}
+{"level":"error"}
+{"level":"info","message":"New order stored: {\n  _id: new ObjectId(\"620dba2bdbca96959434e297\"),\n  product: new ObjectId(\"620cac74188a0655e72e97c4\"),\n  quantity: 1,\n  __v: 0\n}"}
+{"level":"info","message":"New order stored: {\n  _id: new ObjectId(\"620dbcf31467bba614e749a7\"),\n  product: new ObjectId(\"620cac74188a0655e72e97c4\"),\n  quantity: 1,\n  __v: 0\n}"}
+{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"620cac74188\" (type string) at path \"_id\" for model \"Product\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"620cac74188\"","value":"620cac74188","valueType":"string"}
+{"level":"info","message":"New order stored: {\n  _id: new ObjectId(\"620dbf519d4f5b74f39cb7ac\"),\n  product: new ObjectId(\"620dab93dd153bd233ad7c2f\"),\n  quantity: 1,\n  __v: 0\n}"}
+{"level":"info","message":"New order stored: {\n  _id: new ObjectId(\"620dbf789d4f5b74f39cb7af\"),\n  product: new ObjectId(\"620dab93dd153bd233ad7c3d\"),\n  quantity: 1,\n  __v: 0\n}"}
+{"level":"info","message":"New order stored: {\n  _id: new ObjectId(\"620dbfb99d4f5b74f39cb7b2\"),\n  product: new ObjectId(\"620dab93dd153bd233ad7c4f\"),\n  quantity: 1,\n  __v: 0\n}"}
+>>>>>>> Stashed changes
