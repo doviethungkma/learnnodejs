@@ -12,3 +12,20 @@
 {"level":"error"}
 {"level":"error"}
 {"level":"error"}
+<<<<<<< Updated upstream
+=======
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"Hello\"","value":"Hello","valueType":"string"}},"level":"error","message":"Product validation failed: price: Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"Hello\"","value":"Hello","valueType":"string"}},"level":"error","message":"Product validation failed: price: Cast to Number failed for value \"Hello\" (type string) at path \"price\"","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"required","message":"Path `price` is required.","name":"ValidatorError","path":"price","properties":{"message":"Path `price` is required.","path":"price","type":"required"}}},"level":"error","message":"Product validation failed: price: Path `price` is required.","name":"ValidationError"}
+{"_message":"Product validation failed","errors":{"price":{"kind":"required","message":"Path `price` is required.","name":"ValidatorError","path":"price","properties":{"message":"Path `price` is required.","path":"price","type":"required"}}},"level":"error","message":"Product validation failed: price: Path `price` is required.","name":"ValidationError"}
+{"level":"error","message":"Cast to ObjectId failed for value \"620da5b60c03066fa2334e311\" (type string) at path \"_id\" for model \"Product\""}
+{"level":"error","message":"Cast to ObjectId failed for value \"620da5b60c03066fa2334e31e\" (type string) at path \"_id\" for model \"Product\""}
+{"level":"error"}
+{"_message":"Order validation failed","errors":{"product":{"kind":"required","message":"Path `product` is required.","name":"ValidatorError","path":"product","properties":{"message":"Path `product` is required.","path":"product","type":"required"}}},"level":"error","message":"Order validation failed: product: Path `product` is required.","name":"ValidationError"}
+{"_message":"Order validation failed","errors":{"product":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"jagsdhjg\" (type string) at path \"product\"","name":"CastError","path":"product","reason":{},"stringValue":"\"jagsdhjg\"","value":"jagsdhjg","valueType":"string"}},"level":"error","message":"Order validation failed: product: Cast to ObjectId failed for value \"jagsdhjg\" (type string) at path \"product\"","name":"ValidationError"}
+{"level":"error"}
+{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"620cac74188\" (type string) at path \"_id\" for model \"Product\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"620cac74188\"","value":"620cac74188","valueType":"string"}
+>>>>>>> Stashed changes
